@@ -1,0 +1,17 @@
+{
+  "name": "小卡图鉴",
+  "short_name": "小卡图鉴",
+  "description": "管理你的小卡收藏",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4a90d9",
+  "icons": [
+    {
+      "src": "./icons/caticon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
