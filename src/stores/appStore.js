@@ -12,8 +12,7 @@ export const useAppStore = defineStore('app', () => {
   const loaded = ref(false)
 
   async function load() {
-    const data = await loadAll()
-    collections.value = data
+    try { collections.value = await loadAll() } catch (e) { console.error('load', e) }
     loaded.value = true
   }
 
@@ -196,8 +195,7 @@ export const useAppStore = defineStore('app', () => {
   const albumsLoaded = ref(false)
 
   async function loadAlbumsData() {
-    const data = await loadAlbums()
-    albums.value = data
+    try { albums.value = await loadAlbums() } catch (e) { console.error('loadAlbums', e) }
     albumsLoaded.value = true
   }
 
